@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { View, StyleSheet } from 'react-native';
 import { Text, Input, Button } from 'react-native-elements';
 import Spacer from "../components/Spacer";
 
 const SignupScreen = (props) => {
   const { navigation } = props;
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
 
   return (
     <View style={styles.container}>
@@ -12,8 +14,8 @@ const SignupScreen = (props) => {
         <Text h3>Sign Up for Tracker</Text>
       </Spacer>
       <Spacer>
-        <Input label="Email" />
-        <Input label="Password" />
+        <Input label="Email" value={email} onChangeText={setEmail} />
+        <Input label="Password" value={password} onChangeText={setPassword} />
       </Spacer>
       <Spacer>
         <Button title="Sign Up" />
