@@ -14,8 +14,21 @@ const SignupScreen = (props) => {
         <Text h3>Sign Up for Tracker</Text>
       </Spacer>
       <Spacer>
-        <Input autoCapitalize="none" autoCorrect={false} label="Email" value={email} onChangeText={setEmail} />
-        <Input autoCapitalize="none" autoCorrect={false} label="Password" value={password} onChangeText={setPassword} />
+        <Input
+          autoCapitalize="none"
+          autoCorrect={false}
+          label="Email"
+          value={email}
+          onChangeText={setEmail}
+        />
+        <Input
+          autoCapitalize="none"
+          autoCorrect={false}
+          secureTextEntry
+          label="Password"
+          value={password}
+          onChangeText={setPassword}
+        />
       </Spacer>
       <Spacer>
         <Button title="Sign Up" />
