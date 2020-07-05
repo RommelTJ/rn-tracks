@@ -19,4 +19,10 @@ const signin = (dispatch) => {
   };
 };
 
+const signout = (dispatch) => {
+  return () => {
+    // TODO: Implement this
+  };
+};
+
 export const { Provider, Context } = createDataContext(authReducer, {}, { isSignedIn: false });
