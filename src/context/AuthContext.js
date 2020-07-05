@@ -13,4 +13,10 @@ const signup = (dispatch) => {
   };
 };
 
+const signin = (dispatch) => {
+  return ({email, password}) => {
+    // TODO: Implement this
+  };
+};
+
 export const { Provider, Context } = createDataContext(authReducer, {}, { isSignedIn: false });
