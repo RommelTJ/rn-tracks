@@ -1,4 +1,4 @@
-import { AsyncStorage } from "@react-native-community/async-storage";
+import AsyncStorage from '@react-native-community/async-storage';
 import createDataContext from "./createDataContext";
 import trackerApi from "../api/tracker";
 import { navigate } from "../navigationRef";
@@ -18,7 +18,7 @@ const signup = (dispatch) => async ({email, password}) => {
   try {
     const response = await trackerApi.post('/signup', { email, password });
     const token = response.data.token;
-    await AsyncStorage.setItem('token', token, () => {});
+    await AsyncStorage.setItem('token', token);
     dispatch({ type: 'signup', payload: token });
     navigate('TrackList', {});
   } catch (err) {
