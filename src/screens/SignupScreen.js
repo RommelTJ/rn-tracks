@@ -5,7 +5,6 @@ import AuthForm from "../components/AuthForm";
 import NavLink from "../components/NavLink";
 
 const SignupScreen = (props) => {
-  const { navigation } = props;
   const { state, signup } = useContext(AuthContext);
 
   return (
