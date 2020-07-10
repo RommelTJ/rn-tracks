@@ -4,7 +4,7 @@ import { Text } from 'react-native-elements';
 import { SafeAreaView } from "react-navigation";
 import { requestPermissionsAsync, watchPositionAsync, Accuracy } from "expo-location";
 
-import "../_mockLocation"; // TODO: Remove this from PROD.
+// import "../_mockLocation"; // TODO: Remove this from PROD.
 import Map from "../components/Map";
 
 const TrackCreateScreen = () => {
