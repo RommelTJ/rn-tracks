@@ -15,7 +15,9 @@ const fetchTracks = (dispatch) => () => {
   dispatch({ type: 'fetch_tracks' });
 };
 
-const createTrack = (dispatch) => () => {
+const createTrack = (dispatch) => (name, locations) => {
+  console.log("create track... name: ", name);
+  console.log("create track... locations: ", locations.length);
   dispatch({ type: 'create_track' });
 };
 
