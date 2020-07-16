@@ -10,9 +10,9 @@ import TrackForm from "../components/TrackForm";
 
 const TrackCreateScreen = (props) => {
   const { isFocused } = props;
-  const { addLocation, state } = useContext(LocationContext);
-  const callback = useCallback((location) => addLocation(location, state.recording), [state.recording]);
-  const [error] = useLocation(isFocused || state.recording, callback);
+  const { addLocation, state: { recording } } = useContext(LocationContext);
+  const callback = useCallback((location) => addLocation(location, recording), [recording]);
+  const [error] = useLocation(isFocused || recording, callback);
 
   return (
     <SafeAreaView forceInset={{ top: "always" }}>
