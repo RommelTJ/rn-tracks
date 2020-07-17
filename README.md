@@ -1,6 +1,6 @@
 # rn-tracks
 
-Version: 0.0.1 - 03 Jul 2020
+Version: 1.0.0 - 17 Jul 2020
 
 ## Description
 
