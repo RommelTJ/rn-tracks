@@ -7,7 +7,6 @@ import { Context as TrackContext } from "../context/TrackContext";
 const TrackListScreen = (props) => {
   const { navigation } = props;
   const { fetchTracks, state } = useContext(TrackContext);
-  const locations = state.locations;
 
   return (
     <>
@@ -18,7 +17,7 @@ const TrackListScreen = (props) => {
         keyExtractor={(item) => item._id}
         renderItem={({ item }) => {
           return (
-            <TouchableOpacity onPress={() => {}}>
+            <TouchableOpacity onPress={() => { navigation.navigate('TrackDetail', { _id: item._id }) }}>
               <ListItem chevron title={item.name} />
             </TouchableOpacity>
           );
