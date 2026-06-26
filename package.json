@@ -29,7 +29,7 @@
     "expo-location": "~8.2.1"
   },
   "devDependencies": {
-    "@babel/core": "^7.8.6",
+    "@babel/core": "^7.29.6",
     "babel-preset-expo": "~9.5.0"
   },
   "private": true
